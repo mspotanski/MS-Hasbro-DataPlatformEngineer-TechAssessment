@@ -231,3 +231,11 @@ The client will automatically detect your local server. It includes a helpful bo
 ```bash
 python client.py
 ```
+
+Below are screenshots demonstrating the sample output and error handling when running `client.py`:
+
+### Example Output
+![Clean Example](</Section 3/Example Runs/clean_example.png>)
+
+### Error Handling
+![Error Handling Example](</Section 3/Example Runs/error_handling_example.png>)
