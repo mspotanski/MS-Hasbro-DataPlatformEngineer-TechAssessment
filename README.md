@@ -20,7 +20,7 @@
 ## Section 1: Technical Documentation
 
 The written responses, detailed technical analyses, and conceptual answers for **Section 1** can be found in the standalone text file:
-* [`MarcusSpotanski_DataPlatformEngineer_Section1.txt`](Section%201/MarcusSpotanski_DataPlatformEngineer_Section1.txt)
+* **[`MarcusSpotanski_DataPlatformEngineer_Section1.txt`](Section%201/MarcusSpotanski_DataPlatformEngineer_Section1.txt)**
 ---
 
 ## Section 2: Data Pipelines; Terraform and AWS Postgres RDS
