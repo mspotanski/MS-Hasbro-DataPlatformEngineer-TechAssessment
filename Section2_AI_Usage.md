@@ -1,3 +1,17 @@
+# AI Usage Documentation
+
+This document records the AI prompts and responses utilized throughout the technical assessment, broken down by section.
+
+## Table of Contents
+
+- [Section 2: [ETL Pipelines]](#section-2-etl-pipelines)
+- [Section 3: [Insert Topic/Question Title Here]](#section-3-insert-topicquestion-title-here)
+
+---
+
+<a id="section-2-etl-pipelines"></a>
+## Section 2: [ETL Pipelines]
+
 you are a data enigneering expert. i have attached a pdf containing the take home technical exam for a position i am in the running for. You will assist me in setting up the ETL pipeline and actions for uploading and cleaning the given data (provided in a csv file) to the PostgreSQL server. Our PostgreSQL DB is created in AWS with Terraform already, and our user has AmazamS3FullAccess, AmazonRDSFullAccess, and AmazonVPCFullAccess for rights. i can show the variable.tf and main.tf files too if that would help. i believe we created the security group and the postgresql db is all. at a high level, can you show me what an effective, prod-like ETL pipeline would look like at this stage? how should we handle errors or rows with incomplete ID rows?
 
 An effective, production-grade ETL pipeline for this architecture leverages a simple Python framework like Polars or Pandas combined with SQLAlchemy to read from AWS S3, execute data transformations, and write to Amazon RDS PostgreSQL.
