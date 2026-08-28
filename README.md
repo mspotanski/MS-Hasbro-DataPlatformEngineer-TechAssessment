@@ -85,7 +85,8 @@ Return to the repository root directory, retrieve the database host endpoint and
 cd ..
 
 # Retrieve database connection parameters from Terraform outputs
-$env:PGHOST = (terraform -chdir=infra output -raw rds_endpoint)$env:PGDATABASE = (terraform -chdir=infra output -raw rds_dbname)
+$env:PGHOST = (terraform -chdir=infra output -raw rds_endpoint)
+$env:PGDATABASE = (terraform -chdir=infra output -raw rds_dbname)
 
 # Set database master username (matches master user in infra/main.tf)
 $env:PGUSER = "dbadmin"
