@@ -30,6 +30,8 @@ Ensure the following client software packages are installed on your system befor
 * **AWS CLI**: [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * **Terraform CLI**: [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads)
 
+**Windows / PowerShell Users**: If you are configuring AWS CLI or Terraform CLI on Windows for the first time, check out our PowerShell Setup Guide for step-by-step installation scripts, policy configurations, and troubleshooting tips.
+
 #### Install Python Dependencies
 Open PowerShell, navigate to the project repository root directory, and install the required Python dependencies:
 
