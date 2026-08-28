@@ -2,14 +2,14 @@
 
 ## Table of Contents
 * [Section 1: Technical Documentation](#section-1-technical-documentation)
-* [Section 2: Infrastructure & Data Pipeline](#section-2-infrastructure--data-pipeline)
+* [Section 2: Data Pipelines; Terraform and AWS Postgres RDS](#section-2-data-pipelines-terraform-and-aws-postgres-rds)
   * [1. Prerequisites & Installation](#1-prerequisites--installation)
   * [2. AWS Credentials Configuration](#2-aws-credentials-configuration)
   * [3. Provision AWS Infrastructure (Terraform)](#3-provision-aws-infrastructure-terraform)
   * [4. Environment Variables & ETL Pipeline Execution](#4-environment-variables--etl-pipeline-execution)
   * [5. Architectural Decisions & Tradeoffs](#5-architectural-decisions--tradeoffs)
   * [6. Teardown & Resource Cleanup](#6-teardown--resource-cleanup)
-* [Section 3: Secure Iris Classifier API](#section-3-secure-iris-classifier-api)
+* [Section 3: ML API; Secure Iris Classifier API with FASTAPI and ngrok](#section-3-ml-api-secure-iris-classifier-api-with-fastapi-and-ngrok)
   * [1. Architecture & Technical Decisions](#1-architecture--technical-decisions)
   * [2. Troubleshooting Note: Python Versioning](#2-troubleshooting-note-python-versioning)
   * [3. Setup & Installation](#3-setup--installation)
@@ -20,9 +20,7 @@
 ## Section 1: Technical Documentation
 
 The written responses, detailed technical analyses, and conceptual answers for **Section 1** can be found in the standalone text file:
-
-📄 **[`MarcusSpotanski_DataPlatformEngineer_Section1.txt`](./MarcusSpotanski_DataPlatformEngineer_Section1.txt)**
-
+* [`MarcusSpotanski_DataPlatformEngineer_Section1.txt`](Section%201/MarcusSpotanski_DataPlatformEngineer_Section1.txt)
 ---
 
 ## Section 2: Data Pipelines; Terraform and AWS Postgres RDS
@@ -39,7 +37,7 @@ Ensure the following client software packages are installed on your system befor
 * **AWS CLI**: [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * **Terraform CLI**: [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads)
 
-**Windows / PowerShell Users**: If you are configuring AWS CLI or Terraform CLI on Windows for the first time, check out our PowerShell Setup Guide for step-by-step installation scripts, policy configurations, and troubleshooting tips.
+**Windows / PowerShell Users**: If you are configuring AWS CLI or Terraform CLI on Windows for the first time, check out our **[PowerShell Setup Guide](./PowerShell_SetUp_Guide.md)** for step-by-step installation scripts, policy configurations, and troubleshooting tips.
 
 #### Install Python Dependencies
 Open PowerShell, navigate to the project repository root directory, and install the required Python dependencies:
