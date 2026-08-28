@@ -1,6 +1,7 @@
 # Hasbro Data Platform Engineering Take-Home Technical Assessment
 
 ## Table of Contents
+* [Section 1: Technical Documentation](#section-1-technical-documentation)
 * [Section 2: Infrastructure & Data Pipeline](#section-2-infrastructure--data-pipeline)
   * [1. Prerequisites & Installation](#1-prerequisites--installation)
   * [2. AWS Credentials Configuration](#2-aws-credentials-configuration)
@@ -13,6 +14,14 @@
   * [2. Troubleshooting Note: Python Versioning](#2-troubleshooting-note-python-versioning)
   * [3. Setup & Installation](#3-setup--installation)
   * [4. Running the Application](#4-running-the-application)
+
+---
+
+## Section 1: Technical Documentation
+
+The written responses, detailed technical analyses, and conceptual answers for **Section 1** can be found in the standalone text file:
+
+📄 **[`MarcusSpotanski_DataPlatformEngineer_Section1.txt`](./MarcusSpotanski_DataPlatformEngineer_Section1.txt)**
 
 ---
 
