@@ -85,20 +85,17 @@ Return to the repository root directory, retrieve the database host endpoint and
 cd ..
 
 # Retrieve database connection parameters from Terraform outputs
-$env:PGHOST = (terraform -chdir=infra output -raw rds_endpoint)
-$env:PGDATABASE = (terraform -chdir=infra output -raw rds_dbname)
+$env:PGHOST = (terraform -chdir=infra output -raw rds_endpoint)$env:PGDATABASE = (terraform -chdir=infra output -raw rds_dbname)
 
 # Set database master username (matches master user in infra/main.tf)
-$env:PGUSER = "postgres"
+$env:PGUSER = "dbadmin"
 
-# Securely prompt for database master password (masked input)
+# Securely prompt for database master password (masked input, PowerShell 5.1 compatible)
 $env:PGPASSWORD = [System.Net.NetworkCredential]::new("", (Read-Host -AsSecureString "Enter PostgreSQL Password")).Password
 
 # Execute ETL Pipeline
 python pipeline/MarcusSpotanski_DataPlatformEngineer_ETL.py
 ```
-
----
 
 ### 5. Architectural Decisions & Tradeoffs
 
