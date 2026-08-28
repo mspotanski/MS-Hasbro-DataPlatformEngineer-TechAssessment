@@ -25,7 +25,7 @@ The written responses, detailed technical analyses, and conceptual answers for *
 
 ---
 
-## Section 2: Infrastructure & Data Pipeline
+## Section 2: Data Pipelines; Terraform and AWS Postgres RDS
 
 This section provisions an AWS RDS PostgreSQL database using Terraform and executes an automated Python ETL pipeline to ingest, standardize, and load sales order records into PostgreSQL.
 
@@ -143,7 +143,7 @@ Remove-Item -Recurse -Force .terraform, .terraform.lock.hcl, terraform.tfstate, 
 
 ---
 
-## Section 3: Secure Iris Classifier API
+## Section 3: ML API; Secure Iris Classifier API with FASTAPI and ngrok
 
 Welcome! This project demonstrates how to build, secure, and deploy a machine learning classification model using a lightweight, modern web framework. It takes physical flower measurements (sepal and petal dimensions) and predicts the specific species of an Iris flower using a Random Forest model.
 
