@@ -151,19 +151,19 @@ This guide walks you through the technical decisions made during development, ho
 
 ### 1. Architecture & Technical Decisions
 
-We chose a specific stack and implemented security controls at distinct layers of the application to balance **simplicity, customization, and performance**.
+I chose a specific stack and implemented security controls at distinct layers of the application to balance **simplicity, customization, and performance**.
 
 #### Why FastAPI and ngrok?
-* **FastAPI:** We selected FastAPI as our core web framework because it is incredibly fast, highly customizable, and designed for building APIs in Python. It automatically generates documentation and integrates seamlessly with data validation tools.
+* **FastAPI:** I selected FastAPI as our core web framework because it is incredibly fast, highly customizable, and designed for building APIs in Python. It automatically generates documentation and integrates seamlessly with data validation tools.
 * **ngrok:** While this app runs perfectly locally, the code is designed to automatically detect and integrate with ngrok. ngrok creates a secure tunnel from the public internet directly to your local machine, making it perfect for secure, rapid prototyping and testing without needing to manage complex cloud infrastructure.
 
 #### Why Control Portions Were Added Where They Are
-To build a resilient application, we implemented controls as "checkpoints" that incoming data must pass before it ever reaches our machine learning model:
+To build a resilient application, I implemented controls as "checkpoints" that incoming data must pass before it ever reaches our machine learning model:
 
 1. **IP Whitelisting (Middleware Level):** Before the server even processes what the request is asking for, middleware checks the visitor's IP address. If the network isn't trusted, the connection is dropped immediately.
-2. **Rate Limiting (Endpoint Level):** We added a limit of 5 requests per minute to prevent malicious users from spamming the model and overwhelming the server.
-3. **Authentication (Header Level):** We require a custom API key (`S3_API_KEY`) to ensure only authorized users can trigger the model. We enforce this via environment variables rather than hardcoding passwords into the script.
-4. **Input Validation (Schema Level):** Using Pydantic, we validate that the user's measurements are numbers between 0 and 15 cm. Catching bad data (like text or negative numbers) *before* it touches the model prevents Python crashes and guarantees the model only processes what it was trained to understand.
+2. **Rate Limiting (Endpoint Level):** I set a limit of 5 requests per minute to prevent malicious users from spamming the model and overwhelming the server.
+3. **Authentication (Header Level):** A custom API key (`S3_API_KEY`) was required to ensure only authorized users can trigger the model. I enforced this via environment variables rather than hardcoding passwords into the script.
+4. **Input Validation (Schema Level):** Using Pydantic, I validated that the user's measurements are numbers between 0 and 15 cm. Catching bad data (like text or negative numbers) *before* it touches the model prevents Python crashes and guarantees the model only processes what it was trained to understand.
 
 ---
 
